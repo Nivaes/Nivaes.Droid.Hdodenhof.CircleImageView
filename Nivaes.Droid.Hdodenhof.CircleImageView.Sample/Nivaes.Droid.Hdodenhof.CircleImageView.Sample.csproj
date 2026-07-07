@@ -8,8 +8,7 @@
     <AssemblyName>Xamarin.Droid.CircleImageView.Sample</AssemblyName>
     <RootNamespace>Xamarin.Droid.CircleImageView.Sample</RootNamespace>
 
-    <SupportedOSPlatformVersion>23</SupportedOSPlatformVersion>
-    <AndroidUseAapt2>true</AndroidUseAapt2>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <!--<PropertyGroup>
@@ -20,7 +19,7 @@
   </PropertyGroup>-->
   
   <ItemGroup>
-    <ProjectReference Include="..\Xamarin.Droid.Hdodenhof.CircleImageView\Xamarin.Droid.Hdodenhof.CircleImageView.csproj" />
+    <ProjectReference Include="..\Nivaes.Droid.Hdodenhof.CircleImageView\Nivaes.Droid.Hdodenhof.CircleImageView.csproj" />
   </ItemGroup>
 
 </Project>

@@ -7,13 +7,16 @@
 
     <AssemblyName>De.Hdodenhof.CircleImageView</AssemblyName>
     <RootNamespace>De.Hdodenhof.CircleImageView</RootNamespace>
+
+    <IsTrimmable>true</IsTrimmable>
+    <IsAotCompatible>true</IsAotCompatible>
+    <RunAOTAnalysis>true</RunAOTAnalysis>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <Description>Binding library of de.hdodenhof.circleimageview</Description>
-    <PackageId>Nivaes.Droid.Hdodenhof.CircleImageView</PackageId>
-    <PackageTags>xamarin;android;monodroid;circleimageview;droid;hdodenhof</PackageTags>
-    <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release'">true</GeneratePackageOnBuild>
+  <PropertyGroup Condition="'$(Configuration)'!='Debug'">
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <IsPackable>true</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
