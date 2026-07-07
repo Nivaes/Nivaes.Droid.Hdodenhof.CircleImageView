@@ -18,21 +18,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <_SupportedOSPlatformMacOSVersion>13.0</_SupportedOSPlatformMacOSVersion>
-
-    <_SupportedOSPlatformiOSVersion>15.8</_SupportedOSPlatformiOSVersion>
-    <_TargetPlatformiOSVersion>26.0</_TargetPlatformiOSVersion>
-
-    <_SupportedOSPlatformMacCatalystVersion>15.0</_SupportedOSPlatformMacCatalystVersion>
-    <_TargetPlatformMacCatalystVersion>26.0</_TargetPlatformMacCatalystVersion>
-
-    <_SupportedOSPlatformTvOSVersion>15.8</_SupportedOSPlatformTvOSVersion>
-    <_TargetPlatformTvOSVersion>26.0</_TargetPlatformTvOSVersion>
-
     <_SupportedOSPlatformAndroidVersion>24</_SupportedOSPlatformAndroidVersion>
-
-    <!--<_SupportedOSPlatformWindowsVersion>10.0.22000.0</_SupportedOSPlatformWindowsVersion>-->
-    <_TargetPlatformWinodwsMinVersion>10.0.19041.0</_TargetPlatformWinodwsMinVersion>
   </PropertyGroup>
 
   <PropertyGroup>
