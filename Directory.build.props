@@ -1,28 +1,73 @@
 ﻿<Project>
   <PropertyGroup>
-    <Copyright>Copyright (c) Nivaes Systems</Copyright>
+    <Copyright>Copyright (c) Nivaes Systems S.L.</Copyright>
+    <PackageProject>https://github.com/Nivaes/Nivaes.Droid.Hdodenhof.CircleImageView</PackageProject>
     <PackageLicenseExpression>MS-PL</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/Nivaes/Xamarin.Droid.Hdodenhof.CircleImageView</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
     <Authors>Nivaes Systems</Authors>
     <Company>Nivaes Systems</Company>
     <Owners>Nivaes</Owners>
     <PackageReleaseNotes>https://www.nivaes.com</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <RepositoryUrl>https://github.com/Nivaes/Xamarin.Droid.Hdodenhof.CircleImageView</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Nivaes/Nivaes.Droid.Hdodenhof.CircleImageView</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <Product>$(AssemblyName) ($(TargetFramework))</Product>
     <NeutralLanguage>en</NeutralLanguage>
-    <Version>3.1.1</Version>
+    <VersionPrefix>0.0.0</VersionPrefix>
+    <VersionSuffix>-dev-0.0.1</VersionSuffix>
+  </PropertyGroup>
 
-    <LangVersion>latest</LangVersion>
+  <PropertyGroup>
+    <_SupportedOSPlatformMacOSVersion>13.0</_SupportedOSPlatformMacOSVersion>
+
+    <_SupportedOSPlatformiOSVersion>15.8</_SupportedOSPlatformiOSVersion>
+    <_TargetPlatformiOSVersion>26.0</_TargetPlatformiOSVersion>
+
+    <_SupportedOSPlatformMacCatalystVersion>15.0</_SupportedOSPlatformMacCatalystVersion>
+    <_TargetPlatformMacCatalystVersion>26.0</_TargetPlatformMacCatalystVersion>
+
+    <_SupportedOSPlatformTvOSVersion>15.8</_SupportedOSPlatformTvOSVersion>
+    <_TargetPlatformTvOSVersion>26.0</_TargetPlatformTvOSVersion>
+
+    <_SupportedOSPlatformAndroidVersion>24</_SupportedOSPlatformAndroidVersion>
+
+    <!--<_SupportedOSPlatformWindowsVersion>10.0.22000.0</_SupportedOSPlatformWindowsVersion>-->
+    <_TargetPlatformWinodwsMinVersion>10.0.19041.0</_TargetPlatformWinodwsMinVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <_CrossCommonTargets>net10.0</_CrossCommonTargets>
+    <_CrossAndroidTargets>net10.0-android</_CrossAndroidTargets>
+    <_CrossiOSTargets>net10.0-ios</_CrossiOSTargets>
+    <_CrossMacCatalystTargets>net10.0-maccatalyst</_CrossMacCatalystTargets>
+    <_CrossMacOSTargets>net10.0-macos</_CrossMacOSTargets>
+    <_CrossTvOSTargets>net10.0-tvos</_CrossTvOSTargets>
+    <_CrossWindowsTargets>net10.0-windows10.0.22000.0</_CrossWindowsTargets>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <_CrossTargetFrameworks>$(_CrossCommonTargets)</_CrossTargetFrameworks>
+    <!-- Windows-specific targets -->
+    <_CrossTargetFrameworks Condition=" $([MSBuild]::IsOSPlatform('windows')) ">$(_CrossAndroidTargets);$(_CrossiOSTargets);$(_CrossMacCatalystTargets);$(_CrossMacOSTargets);$(_CrossTvOSTargets);$(_CrossWindowsTargets);$(TargetFrameworks)</_CrossTargetFrameworks>
+    <!-- Linux-specific targets -->
+    <_CrossTargetFrameworks Condition=" $([MSBuild]::IsOSPlatform('linux')) ">$(_CrossAndroidTargets);$(TargetFrameworks)</_CrossTargetFrameworks>
+    <!-- Mac-specific targets -->
+    <_CrossTargetFrameworks Condition=" $([MSBuild]::IsOSPlatform('osx')) ">$(_CrossAndroidTargets);$(_CrossiOSTargets);$(_CrossMacCatalystTargets);$(_CrossMacOSTargets);$(_CrossTvOSTargets);$(TargetFrameworks)</_CrossTargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);NU1507</NoWarn>
+    <EnablePackageValidation>true</EnablePackageValidation>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
     <NoWarn>$(NoWarn);1591;1701;1702;1705;VSX1000</NoWarn>
     <GenerateDocumentationFile Condition=" '$(Configuration)' == 'Release' ">true</GenerateDocumentationFile>
-    <GeneratePackageOnBuild Condition=" '$(Configuration)' == 'Release' and '$(IsTestProject)' != 'true'">true</GeneratePackageOnBuild>
 
-    <Platform>AnyCPU</Platform>
     <DebugType>full</DebugType>
     <IsTestProject>$(MSBuildProjectName.Contains('UnitTest'))</IsTestProject>
   </PropertyGroup>
-  
+
 </Project>
