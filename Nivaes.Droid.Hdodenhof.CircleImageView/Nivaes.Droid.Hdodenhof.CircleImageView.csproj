@@ -2,7 +2,7 @@
   
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFrameworks>$(_CrossAndroidTargets)</TargetFrameworks>
+    <TargetFrameworks>$(_AndroidTargetFrameworks)</TargetFrameworks>
     <SupportedOSPlatformVersion>$(_SupportedOSPlatformAndroidVersion)</SupportedOSPlatformVersion>
 
     <AssemblyName>De.Hdodenhof.CircleImageView</AssemblyName>
