@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path="Directory.build.props" />
+    <File Path="Directory.build.targets" />
+    <File Path="global.json" />
+  </Folder>
+  <Project Path="Nivaes.Droid.Hdodenhof.CircleImageView.Sample/Nivaes.Droid.Hdodenhof.CircleImageView.Sample.csproj">
+    <Deploy />
+  </Project>
+  <Project Path="Nivaes.Droid.Hdodenhof.CircleImageView/Nivaes.Droid.Hdodenhof.CircleImageView.csproj" />
+</Solution>
