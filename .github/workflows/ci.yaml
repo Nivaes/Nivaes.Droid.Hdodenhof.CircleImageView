@@ -13,7 +13,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - name: Dump GitHub context
@@ -33,7 +33,7 @@ jobs:
 
     - name: Install workload
       run: |
-          dotnet workload install android ios maccatalyst tvos
+          dotnet workload install android
 
     - name: Restore Dependencies
       run: |
