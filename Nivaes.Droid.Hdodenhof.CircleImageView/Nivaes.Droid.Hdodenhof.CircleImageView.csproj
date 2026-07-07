@@ -13,6 +13,12 @@
     <RunAOTAnalysis>true</RunAOTAnalysis>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <IsBindingProject>true</IsBindingProject>
+    <OutputType>Library</OutputType>
+    <AndroidClassParser>class-parse</AndroidClassParser>
+  </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)'!='Debug'">
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
