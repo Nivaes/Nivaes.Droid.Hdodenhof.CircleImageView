@@ -23,19 +23,10 @@
     <None Include="Images\icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
-  <!--<PropertyGroup>
-    <IsBindingProject>true</IsBindingProject>
-    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
-    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
-    <AndroidResgenClass>Resource</AndroidResgenClass>
+  <PropertyGroup>
+    <Description>Binding library of https://github.com/hdodenhof/CircleImageView</Description>
+    <PackageId>Nivaes.Droid.Hdodenhof.CircleImageView</PackageId>
+    <PackageTags>xamarin;android;nivaes;Hdodenhof;CircleImageView</PackageTags>
   </PropertyGroup>
-  
-  <ItemGroup>
-    <None Include="Resources\*.cs" />
-    <Compile Remove="Resources\*.cs" />
-    <AndroidResource Include="Resources\**\*.xml" Generator="MSBuild:UpdateAndroidResources" />
-    <LibraryProjectZip Include="Jars\*.aar" />
-    <TransformFile Include="Transforms\*.xml" />
-  </ItemGroup>-->
 
 </Project>
